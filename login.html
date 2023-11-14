@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>CPC Chorale</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Playball&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+    <style>
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+:root{
+    --bg-color: #1c3b4d;
+    --text-color: #ffffff;
+    --second-color:  #b4dcf5;
+    --main-color: #232a30;
+    --big-font: 6rem;
+    --h2-font: 3rem;
+    --p-font: 1.1rem;
+}
+
+body{
+    background: var(--text-color);
+    color: var(--bg-color);
+    
+}
+.home{
+    position: relative;
+    width: 100;
+    height: 100vh;
+    background: url(img/backround\ 1.jpg);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+}
+    .navbar {
+    margin-top: 20px;
+    position: fixed;
+    width: 100%;
+    background: transparent; 
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; 
+    display: flex;
+    
+}
+.navbar-brand{
+    margin-left: 140px;
+}
+.nav-link{
+    background-size: cover; 
+    margin-right: 20px;
+    margin-left: 20px;
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-size: medium;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    transition: ease .40s;
+ 
+}
+.nav-link:hover{
+    background: #b4dcf5;
+    transform: scale(1.1);
+    color: #232a30;
+    border-radius: 50px;
+    box-shadow: 5px 5px 15px rgba(49, 80, 221, 0.2);
+
+}
+.gradient-custom {
+/* fallback for old browsers */
+background: #6a11cb;
+
+/* Chrome 10-25, Safari 5.1-6 */
+background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+
+}
+    </style>
+</head>
+
+  <body>
+
+    <!--navbar-->
+    
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+        <img src="img/CPC-PhotoRoom (3).png" alt="Logo" width="200" height="90">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav m-auto my-2 my-lg-0">
+
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="news&updates.html">News & Updates</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="members&mentors.html">Members & Mentors</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="logout.html">Logout</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <section class="vh-100 gradient-custom">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+            <div class="card bg-dark text-white" style="border-radius: 1rem;">
+              <div class="card-body p-5 text-center">
+    
+                <div class="mb-md-5 mt-md-4 pb-5">
+    
+                  <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+                  <p class="text-white-50 mb-5">Please enter your email and password!</p>
+    
+                  <div class="form-outline form-white mb-4">
+                    <input type="email" id="typeEmailX" class="form-control form-control-lg" />
+                    <label class="form-label" for="typeEmailX">Email</label>
+                  </div>
+    
+                  <div class="form-outline form-white mb-4">
+                    <input type="password" id="typePasswordX" class="form-control form-control-lg" />
+                    <label class="form-label" for="typePasswordX">Password</label>
+                  </div>
+    
+                  <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
+    
+                  <button class="btn btn-outline-light btn-lg px-5"type="button" onclick="redirectToIndex()" type="submit">Login</button>
+    
+                  <div class="d-flex justify-content-center text-center mt-4 pt-1">
+                    <a href="#!" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+                    <a href="#!" class="text-white"><i class="fab fa-twitter fa-lg mx-4 px-2"></i></a>
+                    <a href="#!" class="text-white"><i class="fab fa-google fa-lg"></i></a>
+                  </div>
+    
+                </div>
+    
+                <div>
+                  <p class="mb-0">Don't have an account? <a href="#!" class="text-white-50 fw-bold">Sign Up</a>
+                  </p>
+                </div>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-GLhlTQ8iKAYjlZ+8r+KbFptHA+9l2U6PbuIjsP2RFPL4L4txFYz12e8l5i7paTq" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha384-u7iqzE9qgCDOKJ3/FklMuhsDoB2DxOq/JmDd5x5zDsnYcaSL/cq9dXyB1aL2fDIJ" crossorigin="anonymous"></script>
+  <script src="signup.js"></script>
+  <script>
+  
+      // Additional script to redirect to index.html after signup
+      function redirectToIndex() {
+          window.location.href = 'index.html';
+      }
+  </script>
+  </body>
+  </html>
